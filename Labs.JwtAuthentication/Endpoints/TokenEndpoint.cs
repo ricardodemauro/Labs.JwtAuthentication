@@ -30,16 +30,18 @@ public static class TokenEndpoint
         if (formCollection.TryGetValue("password", out var password) == false)
             return Results.BadRequest(new { Error = "Invalid Request" });
 
-        var (accessToken, expiration) = TokenEndpoint.CreateAccessToken(
+        var tokenExpiration = TimeSpan.FromMinutes(60);
+
+        var accessToken = TokenEndpoint.CreateAccessToken(
             jwtOptions,
             userName,
+            TimeSpan.FromMinutes(60),
             new[] { "read_todo", "create_todo" });
 
-        var exp = expiration - DateTime.Now;
         return Results.Ok(new
         {
             access_token = accessToken,
-            expiration = (int)double.Round(exp.TotalSeconds, 0, MidpointRounding.ToZero),
+            expiration = (int)tokenExpiration.TotalSeconds,
             type = "bearer"
         });
     }
@@ -52,7 +54,6 @@ public static class TokenEndpoint
     {
         var keyBytes = Encoding.UTF8.GetBytes(jwtOptions.SigningKey);
         var symmetricKey = new SymmetricSecurityKey(keyBytes);
-        var expiration = DateTime.Now.AddMinutes(15);
 
         var signingCredentials = new SigningCredentials(
             symmetricKey,
@@ -70,10 +71,10 @@ public static class TokenEndpoint
             issuer: jwtOptions.Issuer,
             audience: jwtOptions.Audience,
             claims: claims,
-            expires: DateTime.Now.AddHours(1),
+            expires: DateTime.Now.Add(expiration),
             signingCredentials: signingCredentials);
 
         var rawToken = new JwtSecurityTokenHandler().WriteToken(token);
-        return (rawToken, expiration);
+        return rawToken;
     }
 }
