@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.JwtAuthenticationMinimalAPI", "Labs.JwtAuthenticationMinimalAPI\Labs.JwtAuthenticationMinimalAPI.csproj", "{05A65A9A-B1F9-492C-80CE-D66752CC43F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.JwtAuthentication", "Labs.JwtAuthentication\Labs.JwtAuthentication.csproj", "{05A65A9A-B1F9-492C-80CE-D66752CC43F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,5 @@
-using Labs.JwtAuthenticationMinimalAPI;
-using Labs.JwtAuthenticationMinimalAPI.Endpoints;
+using Labs.JwtAuthentication;
+using Labs.JwtAuthentication.Endpoints;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;

@@ -1,4 +1,4 @@
-﻿namespace Labs.JwtAuthenticationMinimalAPI;
+﻿namespace Labs.JwtAuthentication;
 
 public class JwtOptions
 {

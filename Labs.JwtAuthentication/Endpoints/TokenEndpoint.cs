@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labs.JwtAuthenticationMinimalAPI.Endpoints
+namespace Labs.JwtAuthentication.Endpoints
 {
     public static class TokenEndpoint
     {
