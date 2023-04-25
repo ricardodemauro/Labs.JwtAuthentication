@@ -33,6 +33,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapGet("/", () => "Hello World!");
+app.MapGet("/public", () => "Public Hello World!").AllowAnonymous();
+app.MapGet("/private", () => "Private Hello World!").RequireAuthorization();
 
 app.MapPost("/tokens/connect", (HttpContext ctx, JwtOptions jwtOptions)
     => TokenEndpoint.Connect(ctx, jwtOptions));
