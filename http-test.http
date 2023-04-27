@@ -1,0 +1,18 @@
+POST https://localhost:7004/tokens/connect HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=johndoe&password=A3ddj3wr
+
+###
+
+GET https://localhost:7004/public
+
+###
+
+GET https://localhost:7004/private
+
+
+###
+
+GET https://localhost:7004/private
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwibmFtZSI6ImpvaG5kb2UiLCJyb2xlIjpbInJlYWRfdG9kbyIsInJlYWRfdG9kbyIsImNyZWF0ZV90b2RvIl0sImF1ZCI6WyJodHRwczovL2xvY2FsaG9zdDo3MDA0IiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJleHAiOjE2ODI2MjA0NTYsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDQifQ.lDCbF3-OhH2uCWX2KsaRuovkqdp-nvce_STH8X82qWbqgmonGmUd9TSkHk03Kx2uFOAnD0LumVE0t-wlAyDJbw

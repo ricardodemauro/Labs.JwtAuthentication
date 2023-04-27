@@ -12,7 +12,7 @@ builder.Services.AddSingleton(jwtOptions);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(opts =>
     {
-        var signingKeyBytes = Encoding.UTF8.GetBytes("some-valid-signing-key-here");
+        var signingKeyBytes = Encoding.UTF8.GetBytes(jwtOptions.SigningKey);
         opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
         {
             ValidateIssuer = true,
