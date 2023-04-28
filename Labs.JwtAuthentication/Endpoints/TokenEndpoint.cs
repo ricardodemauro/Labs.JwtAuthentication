@@ -1,12 +1,7 @@
-﻿using IdentityModel;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Labs.JwtAuthentication.Endpoints;
 
@@ -61,13 +56,12 @@ public static async Task<IResult> Connect(
 
         var claims = new List<Claim>()
         {
-            new Claim(JwtClaimTypes.Subject, username),
-            new Claim(JwtClaimTypes.Name, username),
-            new Claim(JwtClaimTypes.Role, permissions[0]),
-            new Claim(JwtClaimTypes.Audience, jwtOptions.Audience)
+            new Claim("sub", username),
+            new Claim("name", username),
+            new Claim("aud", jwtOptions.Audience)
         };
 
-        var roleClaims = permissions.Select(x => new Claim(JwtClaimTypes.Role, x));
+        var roleClaims = permissions.Select(x => new Claim("role", x));
 
         claims.AddRange(roleClaims);
 
