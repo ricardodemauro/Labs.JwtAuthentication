@@ -13,3 +13,18 @@ Content-Type: application/x-www-form-urlencoded
 
 grant_type=password&username=johndoe&password=A3ddj3wr
 ```
+
+
+## TO-DO
+
+### MVP
+
+- [X] Add authentication / authorization control over the routes
+
+### Phase-2
+
+- [ ] Check on some Datasource the username and password
+- [ ] Load the user claims from an external Datasource
+- [ ] Add samples with Asp.NET MVC
+- [ ] Add Authorization Policies
+- [ ] Create a OpenAI/Swagger documentation
