@@ -23,8 +23,8 @@ grant_type=password&username=johndoe&password=A3ddj3wr
 
 ### Phase-2
 
-- [ ] Check on some Datasource the username and password
-- [ ] Load the user claims from an external Datasource
-- [ ] Add samples with Asp.NET MVC
 - [ ] Add Authorization Policies
+- [ ] Check the `username` and `password` against some database or external datasource
+- [ ] Load the user claims from a database
+- [ ] Add samples with Asp.NET MVC
 - [ ] Create a OpenAI/Swagger documentation
