@@ -1,8 +1,9 @@
 # Demo code of JWT Authentication with C# .NET 8
 
 Code for Article: https://rmauro.dev/jwt-authentication-with-csharp-dotnet/
+Second Article: https://rmauro.dev/csharp-get-jwt-token-request/
 
-Author: Ricardo https://rmauro.dev
+Author: @rmauro.dev
 
 ### Valid Http Request to Generate a JWT Token
 
@@ -20,6 +21,7 @@ grant_type=password&username=johndoe&password=A3ddj3wr
 ### MVP
 
 - [X] Add authentication / authorization control over the routes
+- [X] Add method to read jwt token from incoming request
 
 ### Phase-2
 
