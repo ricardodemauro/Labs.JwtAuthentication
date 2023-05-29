@@ -1,7 +1,7 @@
 # Demo code of JWT Authentication with C# .NET 8
 
-Code for Article: https://rmauro.dev/jwt-authentication-with-csharp-dotnet/
-Second Article: https://rmauro.dev/csharp-get-jwt-token-request/
+- Code for Article: https://rmauro.dev/jwt-authentication-with-csharp-dotnet/
+- Second Article: https://rmauro.dev/csharp-get-jwt-token-request/
 
 Author: @rmauro.dev
 
